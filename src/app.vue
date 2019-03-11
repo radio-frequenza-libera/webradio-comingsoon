@@ -1,15 +1,16 @@
 <template>
   <div class="App">
     <div class="content top">
-      <div class="nav">
-        <router-link to="/">Home</router-link>
-        |
-        <router-link to="/about">About</router-link>
-      </div>
+      <!--<div class="nav">-->
+        <!--<router-link to="/">Home</router-link>-->
+        <!--|-->
+        <!--<router-link to="/about">About</router-link>-->
+      <!--</div>-->
       <div class="logo">&nbsp;</div>
     </div>
     <div class="content bottom">
       <!-- TODO player here -->
+      <j-player-wrapper></j-player-wrapper>
       <router-view/>
     </div>
     <waves-background class="waves"></waves-background>
@@ -18,11 +19,13 @@
 
 <script lang="ts">
 import WavesBackground from '@/components/waves-canvas.vue'
+import JPlayerWrapper from '@/components/jplayer-wrapper.vue'
 import { Component, Vue } from 'vue-property-decorator'
 
 @Component({
   components: {
-    WavesBackground
+    WavesBackground,
+    JPlayerWrapper
   }
 })
 export default class App extends Vue {
